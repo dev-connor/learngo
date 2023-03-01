@@ -15,5 +15,7 @@ func canIDrink(age int) bool {
 }
 
 func main() {
-	fmt.Println(canIDrink(18))
+	names := []string{"nico", "lynn", "dal"}
+	names = append(names, "flynn")
+	fmt.Println(names)
 }
