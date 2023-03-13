@@ -3,20 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/dev-connor/learngo/accounts"
+	"github.com/dev-connor/learngo/myDict"
 )
 
 func main() {
-	account := accounts.NewAccount("nico")
-
-	account.Deposit(10)
-	// fmt.Println(account.Balance())
-
-	// err := account.Withdraw(20)
-
-	// if err != nil {
-	// 	log.Println(err)
-	// }
-	// fmt.Println(account.Balance(), account.Owner())
-	fmt.Println(account)
+	dictionary := myDict.Dictionary{}
+	dictionary["hello"] = "hello"
+	fmt.Println(dictionary)
 }
