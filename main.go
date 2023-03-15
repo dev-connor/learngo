@@ -9,12 +9,17 @@ import (
 type Dictionary map[string]string
 
 func main() {
-	dictionary := myDict.Dictionary{"first": "First word"}
-	definition, err := dictionary.Search("first")
+	dictionary := myDict.Dictionary{}
+	word := "hello"
+	definition := "Greeting"
+	err := dictionary.Add(word, definition)
 	if err != nil {
 		fmt.Println(err)
-	} else {
-		fmt.Println(definition)
 	}
-
+	hello, err := dictionary.Search(word)
+	fmt.Println(hello)
+	err2 := dictionary.Add(word, definition)
+	if err2 != nil {
+		fmt.Println(err2)
+	}
 }
