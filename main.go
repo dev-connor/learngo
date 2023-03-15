@@ -9,8 +9,12 @@ import (
 type Dictionary map[string]string
 
 func main() {
-	dictionary := myDict.Dictionary{}
-	dictionary["hello"] = "hello"
-	fmt.Println(dictionary)
+	dictionary := myDict.Dictionary{"first": "First word"}
+	definition, err := dictionary.Search("first")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(definition)
+	}
 
 }
